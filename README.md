@@ -29,3 +29,4 @@ Maven:
 ```
 
 ###第二步:
+阅读wiki:https://github.com/jiang111/ObservableScheduler/wiki
