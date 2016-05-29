@@ -18,7 +18,7 @@ import android.widget.Toast;
 import com.jiang.android.recyclerview.BaseAdapter;
 import com.jiang.android.recyclerview.holder.BaseViewHolder;
 import com.jyuesong.android.schedule.JObservable;
-import com.jyuesong.android.schedule.Subscribe;
+import com.jyuesong.android.schedule.Subscriber;
 import com.jyuesong.android.schedule.SubscribeManager;
 import com.jyuesong.android.schedule.Subscription;
 import com.jyuesong.android.schedule.schedule.Schedules;
@@ -72,7 +72,7 @@ public class Test1Activity extends AppCompatActivity {
             }
         }).workedOn(Schedules.background())
                 .subscribeOn(Schedules.mainThread())
-                .subscribe(new Subscribe<List<Bitmap>>() {
+                .subscribe(new Subscriber<List<Bitmap>>() {
 
                     @Override
                     public void onStart() {

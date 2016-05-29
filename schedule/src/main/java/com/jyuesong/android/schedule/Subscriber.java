@@ -31,7 +31,7 @@ package com.jyuesong.android.schedule;
 /**
  * Created by jiang on 5/29/16.
  */
-public abstract class Subscribe<T> implements Observer<T> {
+public abstract class Subscriber<T> implements Observer<T> {
     @Override
     public abstract void notifyData(T t);
 
