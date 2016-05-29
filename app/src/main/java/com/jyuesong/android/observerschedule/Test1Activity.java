@@ -89,6 +89,7 @@ public class Test1Activity extends AppCompatActivity {
                     @Override
                     public void notifyData(List<Bitmap> strings) {
 
+                        showToast("数据获取成功");
                         initRecyclerView(strings);
                     }
 
@@ -103,6 +104,7 @@ public class Test1Activity extends AppCompatActivity {
             @Override
             public void onCancel(DialogInterface dialog) {
                 mSubscription.unsubscribe();
+                showToast("已取消任务");
 
             }
         });
