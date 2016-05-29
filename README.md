@@ -1,5 +1,7 @@
 # ObservableScheduler
 
+[ ![Download](https://api.bintray.com/packages/yuesong/maven/ObservableScheduler/images/download.svg) ](https://bintray.com/yuesong/maven/ObservableScheduler/_latestVersion)
+
 你的app是不是经常做一些很耗费是工作,但这些工作都是在主线程完成的,因为开线程然后回调主线程很麻烦的说。当然,我们可以用RxJava轻松实现，
 但是如果你的项目没有集成RxJava怎么办,集成进去? 如果集成RxJava只为做这些事岂不是太浪费了。你最好集成RxAndroid,RxBus,RxLifecycle,RxBinding
 是不是感觉要改架构了😂
