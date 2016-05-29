@@ -35,7 +35,16 @@ public class JObservable<T> {
     public Subscription subscribe(Observer<T> subscriber) {
         mSubscriber = new SubscribeManager<T>(subscriber);
         mSubscriber.setScheduler(mSubscribeScheduler);
-        mSubscriber.onStart();
+        if (mSubscribeScheduler != null) {
+            mSubscribeScheduler.execute(new Runnable() {
+                @Override
+                public void run() {
+                    mSubscriber.onStart();
+                }
+            });
+        } else {
+            mSubscriber.onStart();
+        }
         if (mWorkScheduler != null) {
             mSubscriber.setFuture(mWorkScheduler.submit(new Runnable() {
                 @Override
