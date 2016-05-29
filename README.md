@@ -12,7 +12,7 @@ ObservableScheduler 最主要的目的就是轻松的帮你在子线程和主线
 ##Demo:
 ![](https://raw.githubusercontent.com/jiang111/ObservableScheduler/master/art/art.gif)
 
-##简单的demo:
+##示例代码:
 ```java
 JObservable.create(new JObservable.OnSubscribe<List<Bitmap>>() {
             @Override
