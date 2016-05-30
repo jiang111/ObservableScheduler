@@ -80,16 +80,20 @@ public class Schedules {
     }
 
     public static Scheduler background() {
-        if (mWorkScheduler == null) {
-            mWorkScheduler = new WorkScheduler(Executors.newFixedThreadPool(THREAD_SIZE));
+        synchronized (Schedules.class) {
+            if (mWorkScheduler == null) {
+                mWorkScheduler = new WorkScheduler(Executors.newFixedThreadPool(THREAD_SIZE));
+            }
         }
         return mWorkScheduler;
     }
 
 
     public static Scheduler mainThread() {
-        if (mMainScheduler == null) {
-            mMainScheduler = new MainScheduler(new Handler(Looper.getMainLooper()));
+        synchronized (Schedules.class) {
+            if (mMainScheduler == null) {
+                mMainScheduler = new MainScheduler(new Handler(Looper.getMainLooper()));
+            }
         }
         return mMainScheduler;
     }
