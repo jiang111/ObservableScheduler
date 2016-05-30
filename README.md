@@ -12,6 +12,32 @@ ObservableScheduler 最主要的目的就是轻松的帮你在子线程和主线
 ##Demo:
 ![](https://raw.githubusercontent.com/jiang111/ObservableScheduler/master/art/art.gif)
 
+##示例代码:
+```java
+JObservable.create(new JObservable.OnSubscribe<List<Bitmap>>() {
+            @Override
+            public void call(SubscribeManager<List<Bitmap>> mSubscriber) {
+                try {
+                    //TODO... 
+                    mSubscriber.notifyData(bitmaps);
+                } catch (Exception e) {
+                    mSubscriber.error(e);
+                }
+            }
+        }).workedOn(Schedules.background())
+                .subscribeOn(Schedules.mainThread())
+                .subscribe(new Subscribe<List<Bitmap>>() {
+                    @Override
+                    public void notifyData(List<Bitmap> strings) {
+                      //TODO... 
+                    }
+                    @Override
+                    public void error(Throwable t) {
+                      //TODO... 
+                    }
+                });
+```
+
 ##用法:
 ###第一步:
 gradle:
