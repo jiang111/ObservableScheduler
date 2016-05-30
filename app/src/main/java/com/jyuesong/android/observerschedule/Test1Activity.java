@@ -53,13 +53,6 @@ public class Test1Activity extends AppCompatActivity {
                 try {
                     getImage();
                     List<String> strings = subGroupOfImage(mGruopMap);
-                    List<String> string2 = new ArrayList<>();
-                    string2.addAll(strings);
-                    string2.addAll(strings);
-                    string2.addAll(strings);
-                    string2.addAll(strings);
-                    string2.addAll(strings);
-                    string2.addAll(strings);
                     List<Bitmap> bitmaps = new ArrayList<>();
                     for (int i = 0; i < strings.size(); i++) {
                         bitmaps.add(Utils.getSmallBitmap(strings.get(i)));
