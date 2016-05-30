@@ -122,7 +122,7 @@ public class SubscribeManager<T> implements Subscription {
     }
 
     private void cancel(boolean interruptNow) {
-        if (mFuture != null) {
+        if (mFuture != null && !mFuture.isCancelled() && !mFuture.isDone()) {
             mFuture.cancel(interruptNow);
         }
 
