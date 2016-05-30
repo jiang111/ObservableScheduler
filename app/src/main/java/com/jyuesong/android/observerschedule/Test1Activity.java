@@ -111,6 +111,13 @@ public class Test1Activity extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onStop() {
+        if (mSubscription != null)
+            mSubscription.unsubscribeNow();
+        super.onStop();
+    }
+
     private void showToast(String s) {
         Toast.makeText(Test1Activity.this, s, Toast.LENGTH_SHORT).show();
     }
