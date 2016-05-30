@@ -42,14 +42,14 @@ JObservable.create(new JObservable.OnSubscribe<List<Bitmap>>() {
 ###第一步:
 gradle:
 ```
-compile 'com.jiang.android.observablescheduler:schedule:1.0.0'
+compile 'com.jiang.android.observablescheduler:schedule:1.0.1'
 ```
 Maven:
 ```
 <dependency>
   <groupId>com.jiang.android.observablescheduler</groupId>
   <artifactId>schedule</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <type>pom</type>
 </dependency>
 ```
