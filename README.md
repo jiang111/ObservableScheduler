@@ -26,7 +26,7 @@ JObservable.create(new JObservable.OnSubscribe<List<Bitmap>>() {
             }
         }).workedOn(Schedules.background())
                 .subscribeOn(Schedules.mainThread())
-                .subscribe(new Subscribe<List<Bitmap>>() {
+                .subscribe(new Subscriber<List<Bitmap>>() {
                     @Override
                     public void notifyData(List<Bitmap> strings) {
                       //TODO... 
