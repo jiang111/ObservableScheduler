@@ -34,8 +34,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * 该类直接拷贝自RxJava的 https://github.com/ReactiveX/RxJava/blob/1.x/src/main/java/rx/internal/util/SubscriptionList.java
- * 做了一些修改,内部维护了LinkedList的集合。
+ * 内部维护了LinkedList的集合。
  * Created by jiang on 5/29/16.
  */
 public class Subscriptions {

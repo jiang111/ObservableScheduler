@@ -38,20 +38,10 @@ public class WorkScheduler extends Scheduler {
     public ExecutorService fixedThreadPool;
 
 
-    public WorkScheduler() {
-    }
-
     public WorkScheduler(ExecutorService fixedThreadPool) {
         this.fixedThreadPool = fixedThreadPool;
     }
 
-    public ExecutorService getFixedThreadPool() {
-        return fixedThreadPool;
-    }
-
-    public void setFixedThreadPool(ExecutorService fixedThreadPool) {
-        this.fixedThreadPool = fixedThreadPool;
-    }
 
     @Override
     public void execute(Runnable runnable) {

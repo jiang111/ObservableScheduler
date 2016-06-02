@@ -35,15 +35,15 @@ public interface Subscription {
 
     /**
      * 取消订阅
-     * Now的意义在于是否调用{@subscriber.cancel(false)} 中传入false
-     * 即{@mFuture.cancel(false) }
+     * Now的意义在于是否调用{subscriber.cancel()} 中传入false
+     * 即{mFuture.cancel() }
      */
     void unsubscribe();
 
     /**
      * 取消订阅
-     * Now的意义在于是否调用{@subscriber.cancel(true)} 中传入true
-     * 即{@mFuture.cancel(true) }
+     * Now的意义在于是否调用{subscriber.cancel()} 中传入true
+     * 即{mFuture.cancel() }
      */
     void unsubscribeNow();
 
