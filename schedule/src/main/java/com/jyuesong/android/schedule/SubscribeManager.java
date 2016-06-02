@@ -25,14 +25,17 @@ public class SubscribeManager<T> implements Subscription {
 
     private Observer<T> mObserver;
 
+    @SuppressWarnings("unused")
     public Scheduler getScheduler() {
         return mScheduler;
     }
 
+    @SuppressWarnings("unused")
     public Observer<T> getObserver() {
         return mObserver;
     }
 
+    @SuppressWarnings("unused")
     public SubscribeManager() {
     }
 
@@ -97,6 +100,7 @@ public class SubscribeManager<T> implements Subscription {
     }
 
 
+    @SuppressWarnings("unused")
     public void setObserver(Observer<T> observer) {
         mObserver = observer;
     }

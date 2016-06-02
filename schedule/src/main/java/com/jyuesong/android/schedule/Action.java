@@ -31,6 +31,7 @@ package com.jyuesong.android.schedule;
 /**
  * Created by jiang on 5/29/16.
  */
+@SuppressWarnings("unused")
 public abstract class Action<T> implements Observer<T> {
     @Override
     public abstract void notifyData(T t);

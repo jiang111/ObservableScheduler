@@ -42,19 +42,23 @@ public class Subscriptions {
 
     private LinkedList<Subscription> subscriptions;
 
+    @SuppressWarnings("unused")
     public Subscriptions() {
     }
 
+    @SuppressWarnings("unused")
     public Subscriptions(final Subscription... subscriptions) {
         this.subscriptions = new LinkedList<>(Arrays.asList(subscriptions));
     }
 
+    @SuppressWarnings("unused")
     public Subscriptions(Subscription s) {
         this.subscriptions = new LinkedList<>();
         this.subscriptions.add(s);
     }
 
 
+    @SuppressWarnings("unused")
     public void add(final Subscription s) {
         synchronized (this) {
             LinkedList<Subscription> subs = subscriptions;
@@ -68,10 +72,12 @@ public class Subscriptions {
 
     }
 
+    @SuppressWarnings("unused")
     public void unsubscribeNow() {
         unSubscribeList(true);
     }
 
+    @SuppressWarnings("unused")
     public void unsubscribe() {
         unSubscribeList(false);
     }
@@ -102,10 +108,12 @@ public class Subscriptions {
         }
     }
 
+    @SuppressWarnings("unused")
     public void clear() {
         clearList(false);
     }
 
+    @SuppressWarnings("unused")
     public void clearNow() {
         clearList(true);
     }
